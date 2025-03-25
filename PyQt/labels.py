@@ -2,14 +2,14 @@ import sys
 from PyQt5.QtWidgets import QLabel, QApplication, QMainWindow
 from PyQt5.QtGui import QIcon
 from PyQt5.QtGui import QFont
-from PyQt5.QtCore import Qt # for allignments 
+from PyQt5.QtCore import Qt # for alignments
 
 x = 500
 y = 100
 width = 720
 height = 1280
 
-class main_window(QMainWindow):
+class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Another Window")
@@ -26,17 +26,17 @@ class main_window(QMainWindow):
                             "text-decoration: underline;") # Used to add CSS
         
         #label.setAlignment(Qt.AlignTop) # Vertically Top, for bottom use AlignBottom, for center use AlignVCenter
-        #label.setAlignment(Qt.AlignRight) # Horizontally allign right, for left AlignLeft
+        #label.setAlignment(Qt.AlignRight) # Horizontally align right, for left AlignLeft
         #label.setAlignment(Qt.AlignHCenter)
 
-        # Comnining effects of both using OR operator
+        # Combining effects of both using OR operator
         # For same effect AlignCenter
         label.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
         
 
 def main():
     app = QApplication(sys.argv)
-    window = main_window()
+    window = MainWindow()
 
     window.show()
     sys.exit(app.exec())

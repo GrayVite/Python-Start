@@ -15,8 +15,6 @@ class main_window(QMainWindow):
         self.setWindowTitle("Images")
         self.setWindowIcon(QIcon("Assets\\NERC-LOGO-WHITE-BG-min.png"))
 
-        
-
 
 def main():
     app = QApplication(sys.argv)
